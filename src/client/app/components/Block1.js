@@ -13,9 +13,9 @@ export default class Block1 extends Component {
                 <h1>Sardi's/Hardee's Estates</h1>
                 <p>Located in sunny Las Vegas, Nevada, in select neighborhoods, these beautiful gated communities feature
                  spacious 2-story apartments with convenient parking, modern or salvaged appliances,
-                    community swimming pools (not available at all locations), and lush, verdant landscaping commensurate with credit scores.
+                    community swimming pools (not available at all locations), and lush, verdant landscaping commensurate with FICO scores.
                 </p>
-                <p>Prices range from $2k/mo and up, or $125/wk and up, depending on location <strong><em>(Management not
+                <p>Prices range from $2k/mo and up, or $85/wk and up, depending on location <strong><em>(Management not
                 responsible for damages caused by squatters on Hardees premises. Vermin control at extra cost)
                 </em></strong></p>
 

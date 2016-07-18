@@ -58,6 +58,10 @@
 
 	var _Header2 = _interopRequireDefault(_Header);
 
+	var _PageBody = __webpack_require__(173);
+
+	var _PageBody2 = _interopRequireDefault(_PageBody);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -65,6 +69,11 @@
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var appStyle = {
+	    background: "url(../../../assets/water_sky.jpg ) repeat center fixed",
+	    backgroundSize: "cover"
+	};
 
 	var App = function (_Component) {
 	    _inherits(App, _Component);
@@ -80,8 +89,9 @@
 	        value: function render() {
 	            return _react2.default.createElement(
 	                'div',
-	                null,
-	                _react2.default.createElement(_Header2.default, null)
+	                { style: appStyle },
+	                _react2.default.createElement(_Header2.default, null),
+	                _react2.default.createElement(_PageBody2.default, null)
 	            );
 	        }
 	    }]);
@@ -21165,20 +21175,19 @@
 	                background: 'black',
 	                position: 'fixed',
 	                top: '0',
-	                height: '80px',
+	                height: '5em',
 	                width: '100%',
-	                paddingLeft: '20px'
+	                paddingLeft: '1em',
+	                marginBottom: 0,
+	                zIndex: 2
 	            };
-	            // const h1Style ={
-	            //     margin
-	            // }
 	            return _react2.default.createElement(
 	                'div',
 	                { style: divStyle },
 	                _react2.default.createElement(
 	                    'h1',
 	                    null,
-	                    'Welcome to Apartments247'
+	                    'Example358'
 	                )
 	            );
 	        }
@@ -21188,6 +21197,304 @@
 	}(_react.Component);
 
 	exports.default = Header;
+
+/***/ },
+/* 173 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _Block = __webpack_require__(174);
+
+	var _Block2 = _interopRequireDefault(_Block);
+
+	var _PhotoBlock = __webpack_require__(175);
+
+	var _PhotoBlock2 = _interopRequireDefault(_PhotoBlock);
+
+	var _Footer = __webpack_require__(176);
+
+	var _Footer2 = _interopRequireDefault(_Footer);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var PageBody = function (_Component) {
+	    _inherits(PageBody, _Component);
+
+	    function PageBody() {
+	        _classCallCheck(this, PageBody);
+
+	        return _possibleConstructorReturn(this, Object.getPrototypeOf(PageBody).apply(this, arguments));
+	    }
+
+	    _createClass(PageBody, [{
+	        key: 'render',
+	        value: function render() {
+	            var pageBodyStyle = {
+	                width: '80%',
+	                margin: 'auto',
+	                height: '2000px',
+	                marginTop: '5em'
+	            };
+	            return _react2.default.createElement(
+	                'div',
+	                { id: 'container', style: pageBodyStyle },
+	                _react2.default.createElement(_Block2.default, null),
+	                _react2.default.createElement(_PhotoBlock2.default, null),
+	                _react2.default.createElement(_Footer2.default, null)
+	            );
+	        }
+	    }]);
+
+	    return PageBody;
+	}(_react.Component);
+
+	exports.default = PageBody;
+
+/***/ },
+/* 174 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Block1 = function (_Component) {
+	    _inherits(Block1, _Component);
+
+	    function Block1() {
+	        _classCallCheck(this, Block1);
+
+	        return _possibleConstructorReturn(this, Object.getPrototypeOf(Block1).apply(this, arguments));
+	    }
+
+	    _createClass(Block1, [{
+	        key: "render",
+	        value: function render() {
+	            var block1Style = {
+	                width: "100%",
+	                padding: "20px",
+	                fontFamily: "Arial",
+	                paddingTop: '60px'
+	            };
+	            return _react2.default.createElement(
+	                "div",
+	                { style: block1Style },
+	                _react2.default.createElement(
+	                    "h1",
+	                    null,
+	                    "Sardi's/Hardee's Estates"
+	                ),
+	                _react2.default.createElement(
+	                    "p",
+	                    null,
+	                    "Located in sunny Las Vegas, Nevada, in select neighborhoods, these beautiful gated communities feature spacious 2-story apartments with convenient parking, modern or salvaged appliances, community swimming pools (not available at all locations), and lush, verdant landscaping commensurate with FICO scores."
+	                ),
+	                _react2.default.createElement(
+	                    "p",
+	                    null,
+	                    "Prices range from $2k/mo and up, or $85/wk and up, depending on location ",
+	                    _react2.default.createElement(
+	                        "strong",
+	                        null,
+	                        _react2.default.createElement(
+	                            "em",
+	                            null,
+	                            "(Management not responsible for damages caused by squatters on Hardees premises. Vermin control at extra cost)"
+	                        )
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+
+	    return Block1;
+	}(_react.Component);
+
+	exports.default = Block1;
+
+/***/ },
+/* 175 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var styles = {
+	    photoBlock: {
+	        position: "relative",
+	        width: "100%",
+	        left: 0,
+	        top: 0,
+	        padding: 0,
+	        margin: 0,
+	        height: "405px",
+	        zIndex: 1
+	    },
+	    ph1: {
+	        position: "absolute",
+	        width: '50%',
+	        padding: 0,
+	        margin: 0,
+	        left: 0,
+	        height: "400px",
+	        zIndex: 1
+	    },
+	    ph2: {
+	        position: "absolute",
+	        width: '50%',
+	        padding: 0,
+	        margin: 0,
+	        right: 0,
+	        marginRight: "-2.8%",
+	        height: "400px",
+	        zIndex: 1
+	    }
+	};
+
+	var PhotoBlock = function (_Component) {
+	    _inherits(PhotoBlock, _Component);
+
+	    function PhotoBlock() {
+	        _classCallCheck(this, PhotoBlock);
+
+	        return _possibleConstructorReturn(this, Object.getPrototypeOf(PhotoBlock).apply(this, arguments));
+	    }
+
+	    _createClass(PhotoBlock, [{
+	        key: "render",
+	        value: function render() {
+
+	            return _react2.default.createElement(
+	                "div",
+	                { className: "photos", style: styles.photoBlock },
+	                _react2.default.createElement(
+	                    "div",
+	                    null,
+	                    _react2.default.createElement("img", { style: styles.ph1, src: "http://r.rdcpix.com/v02/c96da1300-r1xd-w480_h480_q80.jpg" })
+	                ),
+	                _react2.default.createElement(
+	                    "div",
+	                    null,
+	                    _react2.default.createElement("img", { style: styles.ph2, src: "http://www.backstepfirefighter.com/wp-content/uploads/sites/43/2015/12/LasVegasSquatters.jpg" })
+	                )
+	            );
+	        }
+	    }]);
+
+	    return PhotoBlock;
+	}(_react.Component);
+
+	exports.default = PhotoBlock;
+
+/***/ },
+/* 176 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Footer = function (_Component) {
+	    _inherits(Footer, _Component);
+
+	    function Footer() {
+	        _classCallCheck(this, Footer);
+
+	        return _possibleConstructorReturn(this, Object.getPrototypeOf(Footer).apply(this, arguments));
+	    }
+
+	    _createClass(Footer, [{
+	        key: "render",
+	        value: function render() {
+	            var footerStyle = {
+	                height: "100px",
+	                background: "#68BAE4",
+	                width: "100%",
+	                padding: "20px",
+	                fontFamily: "Arial"
+	            };
+	            return _react2.default.createElement(
+	                "div",
+	                { style: footerStyle },
+	                _react2.default.createElement(
+	                    "h1",
+	                    null,
+	                    "Footer"
+	                )
+	            );
+	        }
+	    }]);
+
+	    return Footer;
+	}(_react.Component);
+
+	exports.default = Footer;
 
 /***/ }
 /******/ ]);
