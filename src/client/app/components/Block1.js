@@ -12,10 +12,9 @@ export default class Block1 extends Component {
         return (
             <div style={block1Style}>
                 <h1>{Listing.title}</h1>
-                <p>{Listing.description}
-                </p>
-                <p>{Listing.pricing}<strong><em> {Listing.disclaimer}</em></strong></p>
-
+                <p>{Listing.description}</p>
+                <p>{Listing.pricing}</p>
+                <p>{Listing.disclaimer}</p>
             </div>
         )
     }
