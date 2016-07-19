@@ -18,7 +18,7 @@ let linkStyle = {
 let ulStyle = {
     display: "inline-block",
     listStyle: "none",
-    marginRight: "100px"
+    marginRight: "80px"
 }
 let liStyle = {
     padding: "10px"

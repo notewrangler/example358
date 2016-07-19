@@ -21504,7 +21504,7 @@
 	var ulStyle = {
 	    display: "inline-block",
 	    listStyle: "none",
-	    marginRight: "100px"
+	    marginRight: "80px"
 	};
 	var liStyle = {
 	    padding: "10px"
