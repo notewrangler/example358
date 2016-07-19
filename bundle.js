@@ -21494,6 +21494,7 @@
 	    fontFamily: "Arial"
 	};
 	var linkDivStyle = {
+	    display: "block",
 	    marginLeft: '10em'
 	};
 	var linkStyle = {

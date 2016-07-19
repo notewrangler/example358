@@ -8,6 +8,7 @@ let footerStyle = {
     fontFamily: "Arial"
 }
 let linkDivStyle = {
+    display: "block",
     marginLeft: '10em'
 }
 let linkStyle = {
