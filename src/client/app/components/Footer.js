@@ -9,7 +9,7 @@ let footerStyle = {
 }
 let linkDivStyle = {
     display: "block",
-    marginLeft: '5em'
+    marginLeft: '4em'
 }
 let linkStyle = {
     textDecoration: "none",
@@ -18,7 +18,7 @@ let linkStyle = {
 let ulStyle = {
     display: "inline-block",
     listStyle: "none",
-    marginRight: "80px"
+    marginRight: "70px"
 }
 let liStyle = {
     padding: "10px"
