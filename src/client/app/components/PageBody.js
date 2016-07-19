@@ -5,7 +5,7 @@ import Footer from './Footer';
 
 export default class PageBody extends Component {
     render() {
-        const pageBodyStyle = {
+        let pageBodyStyle = {
             width: '80%',
             margin: 'auto',
             height: '2000px',
