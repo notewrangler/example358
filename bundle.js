@@ -21495,7 +21495,7 @@
 	};
 	var linkDivStyle = {
 	    display: "block",
-	    marginLeft: '4em'
+	    marginLeft: '3em'
 	};
 	var linkStyle = {
 	    textDecoration: "none",
@@ -21504,7 +21504,7 @@
 	var ulStyle = {
 	    display: "inline-block",
 	    listStyle: "none",
-	    marginRight: "70px"
+	    marginRight: "60px"
 	};
 	var liStyle = {
 	    padding: "10px"
