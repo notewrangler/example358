@@ -21495,7 +21495,7 @@
 	};
 	var linkDivStyle = {
 	    display: "block",
-	    marginLeft: '10em'
+	    marginLeft: '5em'
 	};
 	var linkStyle = {
 	    textDecoration: "none",
@@ -21522,7 +21522,6 @@
 	    _createClass(Footer, [{
 	        key: "render",
 	        value: function render() {
-
 	            return _react2.default.createElement(
 	                "div",
 	                { style: footerStyle },

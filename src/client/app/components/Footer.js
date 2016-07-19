@@ -9,7 +9,7 @@ let footerStyle = {
 }
 let linkDivStyle = {
     display: "block",
-    marginLeft: '10em'
+    marginLeft: '5em'
 }
 let linkStyle = {
     textDecoration: "none",
@@ -26,8 +26,6 @@ let liStyle = {
 
 export default class Footer extends Component {
     render() {
-
-
         return (
             <div style={footerStyle}>
                 <div style={linkDivStyle}>
