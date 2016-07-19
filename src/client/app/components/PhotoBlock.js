@@ -7,7 +7,7 @@ let styles = {
         left: 0,
         top: 0,
         padding: 0,
-        margin: 0,
+        marginBottom: "30px",
         height: "405px",
         zIndex: 1
     },

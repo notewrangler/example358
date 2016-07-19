@@ -14,7 +14,7 @@ export default class Block1 extends Component {
                 <h1>{Listing.title}</h1>
                 <p>{Listing.description}
                 </p>
-                <p>{Listing.pricing}<strong><em>{Listing.disclaimer}</em></strong></p>
+                <p>{Listing.pricing}<strong><em> {Listing.disclaimer}</em></strong></p>
 
             </div>
         )
