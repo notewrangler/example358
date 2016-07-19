@@ -21493,13 +21493,17 @@
 	    padding: "20px",
 	    fontFamily: "Arial"
 	};
+	var linkDivStyle = {
+	    marginLeft: '10em'
+	};
 	var linkStyle = {
-	    textDecoration: "none"
+	    textDecoration: "none",
+	    fontSize: "0.7rem"
 	};
 	var ulStyle = {
 	    display: "inline-block",
 	    listStyle: "none",
-	    marginRight: "30px"
+	    marginRight: "100px"
 	};
 	var liStyle = {
 	    padding: "10px"
@@ -21521,24 +21525,27 @@
 	            return _react2.default.createElement(
 	                "div",
 	                { style: footerStyle },
-	                _links2.default.map(function (link) {
-	                    return _react2.default.createElement(
-	                        "ul",
-	                        { style: ulStyle },
-	                        link.map(function (lk) {
-	                            console.log(lk.name);
-	                            return _react2.default.createElement(
-	                                "li",
-	                                { style: liStyle, key: lk.name },
-	                                _react2.default.createElement(
-	                                    "a",
-	                                    { style: linkStyle, href: lk.url },
-	                                    lk.name
-	                                )
-	                            );
-	                        })
-	                    );
-	                })
+	                _react2.default.createElement(
+	                    "div",
+	                    { style: linkDivStyle },
+	                    _links2.default.map(function (link) {
+	                        return _react2.default.createElement(
+	                            "ul",
+	                            { style: ulStyle },
+	                            link.map(function (lk) {
+	                                return _react2.default.createElement(
+	                                    "li",
+	                                    { style: liStyle, key: lk.url },
+	                                    _react2.default.createElement(
+	                                        "a",
+	                                        { style: linkStyle, href: lk.url },
+	                                        lk.name
+	                                    )
+	                                );
+	                            })
+	                        );
+	                    })
+	                )
 	            );
 	        }
 	    }]);
