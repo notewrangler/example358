@@ -21532,7 +21532,7 @@
 	                                { style: liStyle, key: lk.name },
 	                                _react2.default.createElement(
 	                                    "a",
-	                                    { href: lk.url },
+	                                    { style: linkStyle, href: lk.url },
 	                                    lk.name
 	                                )
 	                            );

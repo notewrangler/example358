@@ -30,7 +30,7 @@ export default class Footer extends Component {
                     return <ul style={ulStyle}>
                         {link.map(function(lk) {
                             console.log(lk.name);
-                            return <li style={liStyle} key={lk.name}><a href={lk.url}>{lk.name}</a></li>;
+                            return <li style={liStyle} key={lk.name}><a style={linkStyle} href={lk.url}>{lk.name}</a></li>;
                         })}
                     </ul>
                 })}
