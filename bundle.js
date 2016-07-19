@@ -21218,11 +21218,11 @@
 
 	var _Block2 = _interopRequireDefault(_Block);
 
-	var _PhotoBlock = __webpack_require__(175);
+	var _PhotoBlock = __webpack_require__(176);
 
 	var _PhotoBlock2 = _interopRequireDefault(_PhotoBlock);
 
-	var _Footer = __webpack_require__(176);
+	var _Footer = __webpack_require__(177);
 
 	var _Footer2 = _interopRequireDefault(_Footer);
 
@@ -21271,7 +21271,7 @@
 /* 174 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
@@ -21282,6 +21282,10 @@
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
+
+	var _listings = __webpack_require__(175);
+
+	var _listings2 = _interopRequireDefault(_listings);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -21301,7 +21305,7 @@
 	    }
 
 	    _createClass(Block1, [{
-	        key: "render",
+	        key: 'render',
 	        value: function render() {
 	            var block1Style = {
 	                width: "100%",
@@ -21310,29 +21314,29 @@
 	                paddingTop: '60px'
 	            };
 	            return _react2.default.createElement(
-	                "div",
+	                'div',
 	                { style: block1Style },
 	                _react2.default.createElement(
-	                    "h1",
+	                    'h1',
 	                    null,
-	                    "Sardi's/Hardee's Estates"
+	                    _listings2.default.title
 	                ),
 	                _react2.default.createElement(
-	                    "p",
+	                    'p',
 	                    null,
-	                    "Located in sunny Las Vegas, Nevada, in select neighborhoods, these beautiful gated communities feature spacious 2-story apartments with convenient parking, modern or salvaged appliances, community swimming pools (not available at all locations), and lush, verdant landscaping commensurate with FICO scores."
+	                    _listings2.default.description
 	                ),
 	                _react2.default.createElement(
-	                    "p",
+	                    'p',
 	                    null,
-	                    "Prices range from $2k/mo and up, or $85/wk and up, depending on location ",
+	                    _listings2.default.pricing,
 	                    _react2.default.createElement(
-	                        "strong",
+	                        'strong',
 	                        null,
 	                        _react2.default.createElement(
-	                            "em",
+	                            'em',
 	                            null,
-	                            "(Management not responsible for damages caused by squatters on Hardees premises. Vermin control at extra cost)"
+	                            _listings2.default.disclaimer
 	                        )
 	                    )
 	                )
@@ -21347,6 +21351,25 @@
 
 /***/ },
 /* 175 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	var Listing = {
+	    title: "Sardi's/Hardee's Estates",
+	    description: "Located in sunny Las Vegas, Nevada, in select neighborhoods, these beautiful gated communities feature spacious 2-story apartments with convenient parking, modern or Goodwill-salvaged appliances,community swimming pools (not available at all locations), and lush, verdant landscaping commensurate with FICO scores.",
+	    pricing: "Prices range from $2k/mo and up, or $85/wk and up, depending on location.",
+	    disclaimer: "(Management not responsible for damages caused by squatters on Hardees premises. Vermin control at extra cost)"
+
+	};
+
+	exports.default = Listing;
+
+/***/ },
+/* 176 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -21437,7 +21460,7 @@
 	exports.default = PhotoBlock;
 
 /***/ },
-/* 176 */
+/* 177 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -21452,6 +21475,10 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _links = __webpack_require__(178);
+
+	var _links2 = _interopRequireDefault(_links);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -21459,6 +21486,24 @@
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var footerStyle = {
+	    background: "#68BAE4",
+	    width: "100%",
+	    padding: "20px",
+	    fontFamily: "Arial"
+	};
+	var linkStyle = {
+	    textDecoration: "none"
+	};
+	var ulStyle = {
+	    display: "inline-block",
+	    listStyle: "none",
+	    marginRight: "30px"
+	};
+	var liStyle = {
+	    padding: "10px"
+	};
 
 	var Footer = function (_Component) {
 	    _inherits(Footer, _Component);
@@ -21472,21 +21517,28 @@
 	    _createClass(Footer, [{
 	        key: "render",
 	        value: function render() {
-	            var footerStyle = {
-	                height: "100px",
-	                background: "#68BAE4",
-	                width: "100%",
-	                padding: "20px",
-	                fontFamily: "Arial"
-	            };
+
 	            return _react2.default.createElement(
 	                "div",
 	                { style: footerStyle },
-	                _react2.default.createElement(
-	                    "h1",
-	                    null,
-	                    "Footer"
-	                )
+	                _links2.default.map(function (link) {
+	                    return _react2.default.createElement(
+	                        "ul",
+	                        { style: ulStyle },
+	                        link.map(function (lk) {
+	                            console.log(lk.name);
+	                            return _react2.default.createElement(
+	                                "li",
+	                                { style: liStyle, key: lk.name },
+	                                _react2.default.createElement(
+	                                    "a",
+	                                    { href: lk.url },
+	                                    lk.name
+	                                )
+	                            );
+	                        })
+	                    );
+	                })
 	            );
 	        }
 	    }]);
@@ -21495,6 +21547,66 @@
 	}(_react.Component);
 
 	exports.default = Footer;
+
+/***/ },
+/* 178 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	var Links = [[{
+	    name: "Google",
+	    url: "http://www.google.com/"
+	}, {
+	    name: "Apartments247",
+	    url: "http://www.apartments247.com/"
+	}, {
+	    name: "Apartments.com",
+	    url: "http://www.apartments.com"
+	}, {
+	    name: "Apartment List",
+	    url: "https://www.apartmentlist.com"
+	}], [{
+	    name: "CNN",
+	    url: "http://www.cnn.com"
+	}, {
+	    name: "Yahoo News",
+	    url: "http://www.yahoo.com/news/"
+	}, {
+	    name: "BBC News",
+	    url: "http://www.bbc.com/news"
+	}, {
+	    name: "Fox News",
+	    url: "http://www.foxnews.com"
+	}], [{
+	    name: "Yahoo Sports",
+	    url: "http://sports.yahoo.com/"
+	}, {
+	    name: "Fox Sports",
+	    url: "http://www.foxsports.com/"
+	}, {
+	    name: "ESPN",
+	    url: "http://espn.go.com/"
+	}, {
+	    name: "CBS Sports",
+	    url: "http://www.cbssports.com/"
+	}], [{
+	    name: "Bellagio Casino",
+	    url: "https://www.bellagio.com/en/casino.html"
+	}, {
+	    name: "MGM Grand Casino",
+	    url: "https://www.mgmgrand.com/"
+	}, {
+	    name: "New York New York Casino",
+	    url: "http://www.newyorknewyork.com"
+	}, {
+	    name: "Luxor Casino",
+	    url: "https://www.luxor.com/"
+	}]];
+	exports.default = Links;
 
 /***/ }
 /******/ ]);
