@@ -21329,17 +21329,12 @@
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    _listings2.default.pricing,
-	                    _react2.default.createElement(
-	                        'strong',
-	                        null,
-	                        _react2.default.createElement(
-	                            'em',
-	                            null,
-	                            ' ',
-	                            _listings2.default.disclaimer
-	                        )
-	                    )
+	                    _listings2.default.pricing
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    _listings2.default.disclaimer
 	                )
 	            );
 	        }
@@ -21361,9 +21356,9 @@
 	});
 	var Listing = {
 	    title: "Sardi's/Hardee's Estates",
-	    description: "Located in sunny Las Vegas, Nevada, in select neighborhoods, these beautiful gated communities feature spacious 2-story apartments with convenient parking, modern or salvaged appliances, community swimming pools (not available at all locations), and lush, verdant landscaping commensurate with FICO scores.",
+	    description: "Located in sunny Las Vegas, Nevada, in select neighborhoods, these beautiful gated communities feature spacious 2-story apartments with convenient parking, modern or salvaged appliances, community swimming pools (not available at all locations), and lush, verdant landscaping commensurate with portfolio diversification.",
 	    pricing: "Prices range from $2k/mo and up, or $85/wk and up, depending on location.",
-	    disclaimer: "(Management not responsible for squatters.)"
+	    disclaimer: "(Special squatter discounts)"
 
 	};
 
