@@ -5,6 +5,7 @@ export default class Block1 extends Component {
     render() {
         let block1Style = {
             width: "100%",
+            boxSizing: "border-box",
             padding: "20px",
             fontFamily: "Arial",
             paddingTop: '60px'

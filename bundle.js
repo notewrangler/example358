@@ -21247,6 +21247,7 @@
 	        key: 'render',
 	        value: function render() {
 	            var pageBodyStyle = {
+	                boxSizing: "border-box",
 	                width: '80%',
 	                margin: 'auto',
 	                height: '2000px',
@@ -21254,7 +21255,7 @@
 	            };
 	            return _react2.default.createElement(
 	                'div',
-	                { id: 'container', style: pageBodyStyle },
+	                { style: pageBodyStyle },
 	                _react2.default.createElement(_Block2.default, null),
 	                _react2.default.createElement(_PhotoBlock2.default, null),
 	                _react2.default.createElement(_Footer2.default, null)
@@ -21309,6 +21310,7 @@
 	        value: function render() {
 	            var block1Style = {
 	                width: "100%",
+	                boxSizing: "border-box",
 	                padding: "20px",
 	                fontFamily: "Arial",
 	                paddingTop: '60px'
@@ -21390,18 +21392,18 @@
 
 	var styles = {
 	    photoBlock: {
-	        position: "relative",
 	        width: "100%",
 	        left: 0,
 	        top: 0,
 	        padding: 0,
 	        marginBottom: "30px",
 	        height: "405px",
-	        zIndex: 1
+	        zIndex: 1,
+	        display: 'flex',
+	        justifyContent: 'space-between'
 	    },
 	    ph1: {
-	        position: "absolute",
-	        width: '50%',
+	        width: '48%',
 	        padding: 0,
 	        margin: 0,
 	        left: 0,
@@ -21409,12 +21411,10 @@
 	        zIndex: 1
 	    },
 	    ph2: {
-	        position: "absolute",
-	        width: '50%',
+
+	        width: '48%',
 	        padding: 0,
 	        margin: 0,
-	        right: 0,
-	        marginRight: "-2.8%",
 	        height: "400px",
 	        zIndex: 1
 	    }
@@ -21436,16 +21436,8 @@
 	            return _react2.default.createElement(
 	                "div",
 	                { className: "photos", style: styles.photoBlock },
-	                _react2.default.createElement(
-	                    "div",
-	                    null,
-	                    _react2.default.createElement("img", { style: styles.ph1, src: "http://r.rdcpix.com/v02/c96da1300-r1xd-w480_h480_q80.jpg" })
-	                ),
-	                _react2.default.createElement(
-	                    "div",
-	                    null,
-	                    _react2.default.createElement("img", { style: styles.ph2, src: "http://www.backstepfirefighter.com/wp-content/uploads/sites/43/2015/12/LasVegasSquatters.jpg" })
-	                )
+	                _react2.default.createElement("img", { style: styles.ph1, src: "http://r.rdcpix.com/v02/c96da1300-r1xd-w480_h480_q80.jpg" }),
+	                _react2.default.createElement("img", { style: styles.ph2, src: "http://www.backstepfirefighter.com/wp-content/uploads/sites/43/2015/12/LasVegasSquatters.jpg" })
 	            );
 	        }
 	    }]);
@@ -21484,27 +21476,27 @@
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var footerStyle = {
+	    display: "flex",
+	    justifyContent: "space-around",
 	    background: "#68BAE4",
 	    width: "100%",
-	    padding: "20px",
 	    fontFamily: "Arial"
 	};
-	var linkDivStyle = {
-	    display: "block",
-	    marginLeft: '3em'
-	};
+	// let linkDivStyle = {
+	//     display: "block",
+	//     textAlign: "left"
+	// }
 	var linkStyle = {
 	    textDecoration: "none",
 	    fontSize: "0.7rem"
 	};
 	var ulStyle = {
-	    display: "inline-block",
 	    listStyle: "none",
 	    marginRight: "60px"
 	};
-	var liStyle = {
-	    padding: "10px"
-	};
+	// let liStyle = {
+	//     // padding: "10px"
+	// }
 
 	var Footer = function (_Component) {
 	    _inherits(Footer, _Component);
@@ -21521,27 +21513,23 @@
 	            return _react2.default.createElement(
 	                "div",
 	                { style: footerStyle },
-	                _react2.default.createElement(
-	                    "div",
-	                    { style: linkDivStyle },
-	                    _links2.default.map(function (link) {
-	                        return _react2.default.createElement(
-	                            "ul",
-	                            { style: ulStyle },
-	                            link.map(function (lk) {
-	                                return _react2.default.createElement(
-	                                    "li",
-	                                    { style: liStyle, key: lk.url },
-	                                    _react2.default.createElement(
-	                                        "a",
-	                                        { style: linkStyle, href: lk.url },
-	                                        lk.name
-	                                    )
-	                                );
-	                            })
-	                        );
-	                    })
-	                )
+	                _links2.default.map(function (link) {
+	                    return _react2.default.createElement(
+	                        "ul",
+	                        { key: link[0].name, style: ulStyle },
+	                        link.map(function (lk) {
+	                            return _react2.default.createElement(
+	                                "li",
+	                                { key: lk.url },
+	                                _react2.default.createElement(
+	                                    "a",
+	                                    { style: linkStyle, href: lk.url },
+	                                    lk.name
+	                                )
+	                            );
+	                        })
+	                    );
+	                })
 	            );
 	        }
 	    }]);
