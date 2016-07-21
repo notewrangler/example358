@@ -17,6 +17,7 @@ let ulStyle = {
     listStyle: "none",
     marginRight: "60px"
 }
+const t = ""
 
 export default class Footer extends Component {
     render() {
@@ -25,7 +26,7 @@ export default class Footer extends Component {
                     {Links.map((link) => {
                         return <ul key={link[0].name} style={ulStyle}>
                             {link.map((lk) => {
-                                return <li key={lk.url}><a style={linkStyle} href={lk.url}>{lk.name}</a></li>;
+                                return <li key={lk.url}><a style={linkStyle} href={lk.url} target="_blank">{lk.name}</a></li>;
                             })}
                         </ul>
                     })}

@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import pics from "../../../../assets/pics";
+
+
 
 let styles = {
     photoBlock: {
@@ -32,13 +35,12 @@ let styles = {
 
 export default class PhotoBlock extends Component {
     render() {
-
+            console.log(pics);
 
         return (
             <div className="photos" style={styles.photoBlock}>
-                    <img style={styles.ph1} src="http://r.rdcpix.com/v02/c96da1300-r1xd-w480_h480_q80.jpg"/>
-
-                    <img style={styles.ph2} src="http://www.backstepfirefighter.com/wp-content/uploads/sites/43/2015/12/LasVegasSquatters.jpg"/>
+                    <img style={styles.ph1} src={pics[0].url}/>
+                    <img style={styles.ph2} src={pics[1].url}/>
             </div>
         )
     }

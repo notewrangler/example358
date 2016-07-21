@@ -21222,7 +21222,7 @@
 
 	var _PhotoBlock2 = _interopRequireDefault(_PhotoBlock);
 
-	var _Footer = __webpack_require__(177);
+	var _Footer = __webpack_require__(178);
 
 	var _Footer2 = _interopRequireDefault(_Footer);
 
@@ -21382,6 +21382,10 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _pics = __webpack_require__(177);
+
+	var _pics2 = _interopRequireDefault(_pics);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -21432,12 +21436,13 @@
 	    _createClass(PhotoBlock, [{
 	        key: "render",
 	        value: function render() {
+	            console.log(_pics2.default);
 
 	            return _react2.default.createElement(
 	                "div",
 	                { className: "photos", style: styles.photoBlock },
-	                _react2.default.createElement("img", { style: styles.ph1, src: "http://r.rdcpix.com/v02/c96da1300-r1xd-w480_h480_q80.jpg" }),
-	                _react2.default.createElement("img", { style: styles.ph2, src: "http://www.backstepfirefighter.com/wp-content/uploads/sites/43/2015/12/LasVegasSquatters.jpg" })
+	                _react2.default.createElement("img", { style: styles.ph1, src: _pics2.default[0].url }),
+	                _react2.default.createElement("img", { style: styles.ph2, src: _pics2.default[1].url })
 	            );
 	        }
 	    }]);
@@ -21449,6 +21454,21 @@
 
 /***/ },
 /* 177 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	var pics = [{ url: "http://r.rdcpix.com/v02/c96da1300-r1xd-w480_h480_q80.jpg"
+	}, { url: "http://www.backstepfirefighter.com/wp-content/uploads/sites/43/2015/12/LasVegasSquatters.jpg"
+	}];
+
+	exports.default = pics;
+
+/***/ },
+/* 178 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -21463,7 +21483,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _links = __webpack_require__(178);
+	var _links = __webpack_require__(179);
 
 	var _links2 = _interopRequireDefault(_links);
 
@@ -21491,6 +21511,7 @@
 	    listStyle: "none",
 	    marginRight: "60px"
 	};
+	var t = "";
 
 	var Footer = function (_Component) {
 	    _inherits(Footer, _Component);
@@ -21517,7 +21538,7 @@
 	                                { key: lk.url },
 	                                _react2.default.createElement(
 	                                    "a",
-	                                    { style: linkStyle, href: lk.url },
+	                                    { style: linkStyle, href: lk.url, target: "_blank" },
 	                                    lk.name
 	                                )
 	                            );
@@ -21534,7 +21555,7 @@
 	exports.default = Footer;
 
 /***/ },
-/* 178 */
+/* 179 */
 /***/ function(module, exports) {
 
 	"use strict";
