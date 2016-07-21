@@ -22,9 +22,9 @@ export default class Footer extends Component {
     render() {
         return (
             <div style={footerStyle}>
-                    {Links.map(function(link){
+                    {Links.map((link) => {
                         return <ul key={link[0].name} style={ulStyle}>
-                            {link.map(function(lk) {
+                            {link.map((lk) => {
                                 return <li key={lk.url}><a style={linkStyle} href={lk.url}>{lk.name}</a></li>;
                             })}
                         </ul>
