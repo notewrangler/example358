@@ -21477,26 +21477,20 @@
 
 	var footerStyle = {
 	    display: "flex",
-	    justifyContent: "space-around",
+	    justifyContent: "center",
 	    background: "#68BAE4",
 	    width: "100%",
 	    fontFamily: "Arial"
 	};
-	// let linkDivStyle = {
-	//     display: "block",
-	//     textAlign: "left"
-	// }
+
 	var linkStyle = {
 	    textDecoration: "none",
-	    fontSize: "0.7rem"
+	    fontSize: "0.8rem"
 	};
 	var ulStyle = {
 	    listStyle: "none",
 	    marginRight: "60px"
 	};
-	// let liStyle = {
-	//     // padding: "10px"
-	// }
 
 	var Footer = function (_Component) {
 	    _inherits(Footer, _Component);
